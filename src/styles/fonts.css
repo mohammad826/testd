@@ -1,0 +1,33 @@
+/* English - Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Spanish - Manrope */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+/* Persian - Vazirmatn */
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap');
+
+:root {
+  --font-en: 'Inter', system-ui, sans-serif;
+  --font-es: 'Manrope', system-ui, sans-serif;
+  --font-fa: 'Vazirmatn', system-ui, sans-serif;
+}
+
+/* Language-specific styles */
+[data-language='en'] {
+  font-family: var(--font-en);
+}
+
+[data-language='es'] {
+  font-family: var(--font-es);
+}
+
+[data-language='fa'] {
+  font-family: var(--font-fa);
+  direction: rtl;
+}
+
+/* RTL support for specific components */
+[data-language='fa'] .rtl-flip {
+  transform: scaleX(-1);
+}
